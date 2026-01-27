@@ -1,0 +1,23 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+
+# Build outputs
+dist/
+build/
+.next
+out/
+
+
+# Test and coverage
+coverage
+.nyc_output
+.jest
+
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
