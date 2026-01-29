@@ -1,0 +1,6 @@
+<svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="75" cy="75" r="75" fill="#F8F7F2"/>
+  <circle cx="75" cy="60" r="25" fill="#1B4332"/>
+  <ellipse cx="75" cy="110" rx="35" ry="45" fill="#1B4332"/>
+  <text x="75" y="145" font-family="Arial, sans-serif" font-size="8" fill="#D4AF37" text-anchor="middle" font-weight="bold">priya-sharma</text>
+</svg>

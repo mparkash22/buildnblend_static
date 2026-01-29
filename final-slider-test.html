@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Slider Test</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        body { 
+            margin: 0; 
+            padding: 20px; 
+            background: var(--gradient-hero-light);
+        }
+        .test-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .test-hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+        .test-hero-content {
+            max-width: 600px;
+            z-index: 2;
+        }
+        .test-hero-content h1 {
+            color: var(--color-charcoal);
+            margin-bottom: 20px;
+        }
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+        }
+        .controls button {
+            margin: 2px;
+            padding: 8px 12px;
+            background: #D4AF37;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .controls button:hover {
+            background: #B8941F;
+        }
+    </style>
+</head>
+<body>
+    <section class="test-hero">
+        <div class="test-hero-container">
+            <div class="test-hero-content">
+                <h1>Final Slider Test</h1>
+                <p>Testing the complete hero image slider with all 5 images</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                    <a href="#" class="btn btn-secondary">Explore Menu</a>
+                </div>
+            </div>
+            <div class="hero-image-slider" role="region" aria-label="Featured dishes slideshow">
+                <div class="slider-container">
+                    <div class="slide active" aria-hidden="false">
+                        <img src="images/hero/featured-dish.svg" alt="Colorful burrito bowl with fresh vegetables, cilantro rice, and vibrant toppings" loading="eager">
+                    </div>
+                    <div class="slide" aria-hidden="true">
+                        <img src="images/hero/signature-burrito.svg" alt="Signature Mexican burrito with Indian spiced black beans and fresh cilantro" loading="lazy">
+                    </div>
+                    <div class="slide" aria-hidden="true">
+                        <img src="images/hero/mediterranean-wrap.svg" alt="Mediterranean wrap with falafel, hummus, and fresh vegetables" loading="lazy">
+                    </div>
+                    <div class="slide" aria-hidden="true">
+                        <img src="images/hero/green-smoothie.svg" alt="Fresh green smoothie with spinach, mango, and wellness ingredients" loading="lazy">
+                    </div>
+                    <div class="slide" aria-hidden="true">
+                        <img src="images/hero/fusion-bowl.svg" alt="Indian fusion bowl with quinoa, paneer, and colorful vegetables" loading="lazy">
+                    </div>
+                </div>
+                
+                <!-- Navigation dots -->
+                <div class="slider-nav" role="tablist" aria-label="Slideshow navigation">
+                    <button class="nav-dot active" role="tab" aria-selected="true" aria-label="Show slide 1 - Burrito Bowl" data-slide="0"></button>
+                    <button class="nav-dot" role="tab" aria-selected="false" aria-label="Show slide 2 - Signature Burrito" data-slide="1"></button>
+                    <button class="nav-dot" role="tab" aria-selected="false" aria-label="Show slide 3 - Mediterranean Wrap" data-slide="2"></button>
+                    <button class="nav-dot" role="tab" aria-selected="false" aria-label="Show slide 4 - Green Smoothie" data-slide="3"></button>
+                    <button class="nav-dot" role="tab" aria-selected="false" aria-label="Show slide 5 - Fusion Bowl" data-slide="4"></button>
+                </div>
+                
+                <!-- Pause/Play button for accessibility -->
+                <button class="slider-control" aria-label="Pause slideshow" data-action="pause">
+                    <span class="sr-only">Pause slideshow</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M6 4H10V20H6V4ZM14 4H18V20H14V4Z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <div class="controls">
+        <div><strong>Manual Controls:</strong></div>
+        <button onclick="goToSlide(0)">Image 1</button>
+        <button onclick="goToSlide(1)">Image 2</button>
+        <button onclick="goToSlide(2)">Image 3</button>
+        <button onclick="goToSlide(3)">Image 4</button>
+        <button onclick="goToSlide(4)">Image 5</button>
+        <br>
+        <button onclick="toggleAuto()">Toggle Auto</button>
+        <button onclick="nextSlide()">Next</button>
+        <button onclick="prevSlide()">Previous</button>
+    </div>
+    
+    <script src="js/hero-slider.js"></script>
+    
+    <script>
+        // Add manual controls for testing
+        function goToSlide(index) {
+            const slider = document.querySelector('.hero-image-slider');
+            if (slider && slider.heroSliderInstance) {
+                slider.heroSliderInstance.goToSlide(index);
+            }
+        }
+        
+        function toggleAuto() {
+            const slider = document.querySelector('.hero-image-slider');
+            if (slider && slider.heroSliderInstance) {
+                slider.heroSliderInstance.togglePlayPause();
+            }
+        }
+        
+        function nextSlide() {
+            const slider = document.querySelector('.hero-image-slider');
+            if (slider && slider.heroSliderInstance) {
+                slider.heroSliderInstance.nextSlide();
+            }
+        }
+        
+        function prevSlide() {
+            const slider = document.querySelector('.hero-image-slider');
+            if (slider && slider.heroSliderInstance) {
+                slider.heroSliderInstance.previousSlide();
+            }
+        }
+        
+        // Log when slider is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const slider = document.querySelector('.hero-image-slider');
+                if (slider && slider.heroSliderInstance) {
+                    console.log('Slider is ready and working!');
+                } else {
+                    console.log('Slider not found or not initialized');
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

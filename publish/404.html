@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - Build & Blend">
+    <meta name="author" content="Build & Blend">
+    <title>404 - Page Not Found | Build & Blend</title>
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.svg">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    
+    <style>
+        .error-404-section {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-4xl) var(--section-padding-x);
+            background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-off-white) 100%);
+        }
+        
+        .error-404-content {
+            text-align: center;
+            max-width: 600px;
+        }
+        
+        .error-404-number {
+            font-size: 8rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--color-gold);
+            line-height: 1;
+            margin-bottom: var(--space-lg);
+            text-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .error-404-title {
+            font-size: 2.5rem;
+            color: var(--color-dark-green);
+            margin-bottom: var(--space-md);
+        }
+        
+        .error-404-description {
+            font-size: 1.1rem;
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-2xl);
+            line-height: 1.7;
+        }
+        
+        .error-404-buttons {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: var(--space-3xl);
+        }
+        
+        .popular-pages {
+            margin-top: var(--space-3xl);
+            padding-top: var(--space-3xl);
+            border-top: 2px solid rgba(27, 67, 50, 0.1);
+        }
+        
+        .popular-pages h2 {
+            font-size: 1.5rem;
+            color: var(--color-dark-green);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .popular-pages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+        }
+        
+        .popular-page-link {
+            display: block;
+            padding: var(--space-lg);
+            background: white;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--color-dark-green);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .popular-page-link:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            color: var(--color-gold);
+        }
+        
+        .popular-page-link h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .popular-page-link p {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+        }
+        
+        @media (max-width: 767px) {
+            .error-404-number {
+                font-size: 5rem;
+            }
+            
+            .error-404-title {
+                font-size: 1.8rem;
+            }
+            
+            .error-404-buttons {
+                flex-direction: column;
+            }
+            
+            .popular-pages-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.svg" alt="Build & Blend - Mix Match Thrive">
+                    <span class="brand-name">BUILD & BLEND</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="nutrition.html" class="nav-link">Nutrition</a></li>
+                    <li><a href="locations.html" class="nav-link">Locations</a></li>
+                    <li><a href="community.html" class="nav-link">Community</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="error-404-section">
+            <div class="error-404-content">
+                <div class="error-404-number" aria-label="Error 404">404</div>
+                <h1 class="error-404-title">Page Not Found</h1>
+                <p class="error-404-description">
+                    Oops! It looks like this page took a wrong turn. Don't worry—we'll help you get back on track to building your perfect meal.
+                </p>
+                
+                <div class="error-404-buttons">
+                    <a href="index.html" class="btn btn-primary">Return to Homepage</a>
+                    <a href="menu.html" class="btn btn-secondary">Explore Our Menu</a>
+                </div>
+                
+                <div class="popular-pages">
+                    <h2>Popular Pages</h2>
+                    <div class="popular-pages-grid">
+                        <a href="menu.html" class="popular-page-link">
+                            <h3>Menu</h3>
+                            <p>Explore our customizable fusion cuisine</p>
+                        </a>
+                        
+                        <a href="about.html" class="popular-page-link">
+                            <h3>About Us</h3>
+                            <p>Learn our story and values</p>
+                        </a>
+                        
+                        <a href="locations.html" class="popular-page-link">
+                            <h3>Locations</h3>
+                            <p>Find us in Satya Niketan</p>
+                        </a>
+                        
+                        <a href="nutrition.html" class="popular-page-link">
+                            <h3>Nutrition</h3>
+                            <p>Discover our wellness philosophy</p>
+                        </a>
+                        
+                        <a href="community.html" class="popular-page-link">
+                            <h3>Community</h3>
+                            <p>Join our wellness community</p>
+                        </a>
+                        
+                        <a href="contact.html" class="popular-page-link">
+                            <h3>Contact</h3>
+                            <p>Get in touch with us</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-logo">
+            <span class="brand-name-footer">BUILD & BLEND</span>
+            <p class="footer-tagline">MIX • <span class="tagline-match">MATCH</span> • THRIVE</p>
+        </div>
+        <div class="footer-container">
+            <h3 class="sr-only">Footer Navigation</h3>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="nutrition.html">Nutrition</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <ul class="social-links">
+                    <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                    <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                    <li><a href="#" aria-label="WhatsApp">WhatsApp</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" aria-label="Email address">
+                    <button type="submit" aria-label="Subscribe to newsletter">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Phone: +91-XXXXX-XXXXX</p>
+                <p>Email: hello@buildandblend.in</p>
+                <p>Satya Niketan, New Delhi</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Build & Blend. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

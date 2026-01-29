@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Access Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .test-item { border: 1px solid #ccc; padding: 10px; text-align: center; }
+        .test-item img { width: 150px; height: 150px; border: 2px solid #D4AF37; border-radius: 50%; object-fit: cover; }
+        .status { margin-top: 10px; padding: 5px; border-radius: 3px; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .loading { background: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <h1>File Access Test</h1>
+    <p>Testing if SVG files can be loaded directly...</p>
+    
+    <div class="test-grid">
+        <div class="test-item">
+            <h3>Featured Dish</h3>
+            <img src="images/hero/featured-dish.svg" alt="Featured dish" data-name="featured-dish.svg">
+            <div class="status loading">Loading...</div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Signature Burrito</h3>
+            <img src="images/hero/signature-burrito.svg" alt="Signature burrito" data-name="signature-burrito.svg">
+            <div class="status loading">Loading...</div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Mediterranean Wrap</h3>
+            <img src="images/hero/mediterranean-wrap.svg" alt="Mediterranean wrap" data-name="mediterranean-wrap.svg">
+            <div class="status loading">Loading...</div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Green Smoothie</h3>
+            <img src="images/hero/green-smoothie.svg" alt="Green smoothie" data-name="green-smoothie.svg">
+            <div class="status loading">Loading...</div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Fusion Bowl</h3>
+            <img src="images/hero/fusion-bowl.svg" alt="Fusion bowl" data-name="fusion-bowl.svg">
+            <div class="status loading">Loading...</div>
+        </div>
+    </div>
+    
+    <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 5px;">
+        <h2>Test Results</h2>
+        <div id="results"></div>
+    </div>
+    
+    <script>
+        const results = document.getElementById('results');
+        const images = document.querySelectorAll('img');
+        let loadedCount = 0;
+        let errorCount = 0;
+        
+        function addResult(message) {
+            results.innerHTML += message + '<br>';
+        }
+        
+        images.forEach((img, index) => {
+            const statusDiv = img.nextElementSibling;
+            const fileName = img.dataset.name;
+            
+            img.onload = function() {
+                loadedCount++;
+                statusDiv.textContent = `✓ Loaded (${this.naturalWidth}x${this.naturalHeight})`;
+                statusDiv.className = 'status success';
+                addResult(`✓ ${fileName}: Loaded successfully - ${this.naturalWidth}x${this.naturalHeight}px`);
+                checkComplete();
+            };
+            
+            img.onerror = function() {
+                errorCount++;
+                statusDiv.textContent = '✗ Failed to load';
+                statusDiv.className = 'status error';
+                addResult(`✗ ${fileName}: Failed to load`);
+                checkComplete();
+            };
+            
+            // Force reload to test
+            const src = img.src;
+            img.src = '';
+            img.src = src;
+        });
+        
+        function checkComplete() {
+            if (loadedCount + errorCount === images.length) {
+                addResult(`<br><strong>Test Complete:</strong>`);
+                addResult(`✓ Successfully loaded: ${loadedCount}`);
+                addResult(`✗ Failed to load: ${errorCount}`);
+                
+                if (errorCount === 0) {
+                    addResult(`<br>🎉 All images loaded successfully! The slider should work.`);
+                } else {
+                    addResult(`<br>⚠️ Some images failed to load. Check file paths and permissions.`);
+                }
+            }
+        }
+        
+        // Timeout check
+        setTimeout(() => {
+            if (loadedCount + errorCount < images.length) {
+                addResult(`⏰ Timeout: Some images are taking too long to load.`);
+                images.forEach((img, index) => {
+                    if (!img.complete) {
+                        const statusDiv = img.nextElementSibling;
+                        statusDiv.textContent = '⏰ Timeout';
+                        statusDiv.className = 'status error';
+                    }
+                });
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

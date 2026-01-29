@@ -1,0 +1,6 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1B4332"/>
+  <circle cx="400" cy="225" r="100" fill="#D4AF37" opacity="0.2"/>
+  <text x="400" y="220" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle" font-weight="bold">Blog Post 1</text>
+  <text x="400" y="260" font-family="Arial, sans-serif" font-size="18" fill="#9ACD32" text-anchor="middle">800x450 • 16:9</text>
+</svg>

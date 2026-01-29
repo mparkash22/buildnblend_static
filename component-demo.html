@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Demo - Build & Blend</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <style>
+        .demo-section {
+            padding: var(--space-4xl) var(--section-padding-x);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .demo-section h2 {
+            margin-bottom: var(--space-xl);
+            color: var(--color-dark-green);
+        }
+        
+        .button-demo {
+            display: flex;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .card-demo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .form-demo {
+            max-width: 600px;
+            margin-bottom: var(--space-2xl);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">Build & Blend</a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="nutrition.html" class="nav-link">Nutrition</a></li>
+                    <li><a href="locations.html" class="nav-link">Locations</a></li>
+                    <li><a href="community.html" class="nav-link">Community</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Button Components Demo -->
+        <section class="demo-section">
+            <h2>Button Components</h2>
+            <div class="button-demo">
+                <a href="#" class="btn btn-primary">Primary Button (Gold)</a>
+                <a href="#" class="btn btn-secondary">Secondary Button (Lime)</a>
+                <a href="#" class="btn btn-tertiary">Tertiary Button (Outline)</a>
+            </div>
+        </section>
+        
+        <!-- Card Components Demo -->
+        <section class="demo-section" style="background-color: var(--color-cream);">
+            <h2>Card Components</h2>
+            
+            <h3 style="margin-bottom: var(--space-lg);">Feature Cards</h3>
+            <div class="card-demo">
+                <div class="card card-feature">
+                    <h4>Customizable Meals</h4>
+                    <p>Build your perfect meal with our extensive selection of bases, proteins, and toppings.</p>
+                </div>
+                <div class="card card-feature">
+                    <h4>Fresh Ingredients</h4>
+                    <p>We source the highest quality ingredients to ensure every meal is nutritious and delicious.</p>
+                </div>
+                <div class="card card-feature">
+                    <h4>Wellness Focus</h4>
+                    <p>Our menu is designed to support your health goals without compromising on taste.</p>
+                </div>
+            </div>
+            
+            <h3 style="margin-bottom: var(--space-lg); margin-top: var(--space-4xl);">Value Cards</h3>
+            <div class="card-demo">
+                <div class="card card-value">
+                    <h4>Respect for Food</h4>
+                    <p>We honor culinary traditions while creating innovative fusion dishes.</p>
+                </div>
+                <div class="card card-value">
+                    <h4>Your Wellness</h4>
+                    <p>Your health journey is unique, and we're here to support it every step of the way.</p>
+                </div>
+                <div class="card card-value">
+                    <h4>Real Choice</h4>
+                    <p>True customization means you control every aspect of your meal.</p>
+                </div>
+            </div>
+            
+            <h3 style="margin-bottom: var(--space-lg); margin-top: var(--space-4xl);">Menu Item Cards</h3>
+            <div class="card-demo">
+                <div class="card card-menu">
+                    <img src="https://via.placeholder.com/450x253/1B4332/FFFFFF?text=Menu+Item" alt="Menu item placeholder">
+                    <div class="card-menu-content">
+                        <h4 class="card-menu-title">Mexican Burrito</h4>
+                        <p class="card-menu-description">Cilantro rice, spiced black beans, fresh vegetables with Indian spices wrapped in a warm tortilla.</p>
+                        <p class="card-menu-price">₹249</p>
+                        <a href="#" class="btn btn-primary">Customize</a>
+                    </div>
+                </div>
+                <div class="card card-menu">
+                    <img src="https://via.placeholder.com/450x253/1B4332/FFFFFF?text=Menu+Item" alt="Menu item placeholder">
+                    <div class="card-menu-content">
+                        <h4 class="card-menu-title">Mediterranean Bowl</h4>
+                        <p class="card-menu-description">Quinoa base with hummus, falafel, fresh vegetables, and tahini dressing.</p>
+                        <p class="card-menu-price">₹279</p>
+                        <a href="#" class="btn btn-primary">Customize</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Form Components Demo -->
+        <section class="demo-section">
+            <h2>Form Components</h2>
+            <div class="form-demo">
+                <form>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message-type" class="form-label">Message Type</label>
+                        <select id="message-type" class="form-select">
+                            <option value="">Select a type</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="order">Order Question</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" class="form-textarea" placeholder="Your message"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="error-demo" class="form-label">Error State Demo</label>
+                        <input type="text" id="error-demo" class="form-input error" value="Invalid input">
+                        <div class="form-error">This field is required</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="nutrition.html">Nutrition</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <ul class="social-links">
+                    <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                    <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                    <li><a href="#" aria-label="WhatsApp">WhatsApp</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" aria-label="Email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Phone: +91-XXXXX-XXXXX</p>
+                <p>Email: hello@buildandblend.in</p>
+                <p>Satya Niketan, New Delhi</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Build & Blend. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

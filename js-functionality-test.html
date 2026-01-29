@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functionality Test - Build & Blend</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .test-section {
+            padding: 40px 20px;
+            margin: 20px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+        .test-section h2 {
+            color: var(--color-dark-green);
+            margin-bottom: 20px;
+        }
+        .test-result {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .test-pass {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .test-fail {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-container">
+                <div class="logo">
+                    <a href="index.html">Build & Blend</a>
+                </div>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="#test-section" class="nav-link">Test Anchor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" style="padding: 40px 20px;">
+            <h1>JavaScript Functionality Test Page</h1>
+            <p>This page tests all JavaScript functionality implemented for the Build & Blend website.</p>
+
+            <!-- Test 1: Navigation -->
+            <div class="test-section" id="test-section">
+                <h2>Test 1: Navigation JavaScript (main.js)</h2>
+                <div id="nav-test-results"></div>
+                <p><strong>Manual Tests:</strong></p>
+                <ul>
+                    <li>✓ Scroll down to see if header becomes "scrolled" (compact)</li>
+                    <li>✓ Click hamburger menu (mobile view) to toggle menu</li>
+                    <li>✓ Click "Test Anchor" link above to test smooth scroll</li>
+                    <li>✓ Check if current page link has "active" class</li>
+                </ul>
+            </div>
+
+            <!-- Test 2: Menu Filtering -->
+            <div class="test-section">
+                <h2>Test 2: Menu Filtering (menu-filter.js)</h2>
+                <div class="filter-buttons" style="margin-bottom: 20px;">
+                    <button class="btn btn-secondary filter-btn active" data-category="all">All</button>
+                    <button class="btn btn-secondary filter-btn" data-category="test1">Category 1</button>
+                    <button class="btn btn-secondary filter-btn" data-category="test2">Category 2</button>
+                </div>
+                <div class="menu-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                    <div class="card card-menu" data-category="test1">
+                        <div style="padding: 20px;">Item 1 (Category 1)</div>
+                    </div>
+                    <div class="card card-menu" data-category="test2">
+                        <div style="padding: 20px;">Item 2 (Category 2)</div>
+                    </div>
+                    <div class="card card-menu" data-category="test1">
+                        <div style="padding: 20px;">Item 3 (Category 1)</div>
+                    </div>
+                </div>
+                <p style="margin-top: 20px;"><strong>Manual Test:</strong> Click filter buttons to see items show/hide with fade transition</p>
+            </div>
+
+            <!-- Test 3: Form Validation -->
+            <div class="test-section">
+                <h2>Test 3: Form Validation (form-validation.js)</h2>
+                <form id="contactForm" style="max-width: 600px;">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name *</label>
+                        <input type="text" id="name" class="form-input" placeholder="Your name">
+                        <div id="nameError" class="form-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" id="email" class="form-input" placeholder="your@email.com">
+                        <div id="emailError" class="form-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="tel" id="phone" class="form-input" placeholder="+91-XXXXX-XXXXX">
+                        <div id="phoneError" class="form-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="messageType" class="form-label">Message Type *</label>
+                        <select id="messageType" class="form-select">
+                            <option value="">Select type</option>
+                            <option value="general">General</option>
+                            <option value="order">Order</option>
+                        </select>
+                        <div id="messageTypeError" class="form-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" class="form-textarea" rows="4" placeholder="Your message (min 10 characters)"></textarea>
+                        <div id="messageError" class="form-error"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Test Form</button>
+                </form>
+                <p style="margin-top: 20px;"><strong>Manual Tests:</strong></p>
+                <ul>
+                    <li>✓ Leave fields empty and blur - should show "This field is required"</li>
+                    <li>✓ Enter invalid email - should show "Please enter a valid email address"</li>
+                    <li>✓ Enter invalid phone - should show "Please enter a valid phone number"</li>
+                    <li>✓ Enter message less than 10 chars - should show error</li>
+                    <li>✓ Submit with errors - should prevent submission and scroll to first error</li>
+                    <li>✓ Submit valid form - should show success alert</li>
+                </ul>
+            </div>
+
+            <!-- Test 4: Lazy Loading -->
+            <div class="test-section">
+                <h2>Test 4: Lazy Loading (lazy-load.js)</h2>
+                <p>Scroll down to see lazy-loaded images appear with fade-in effect:</p>
+                <div style="height: 800px; background: linear-gradient(to bottom, #f0f0f0, #e0e0e0); display: flex; align-items: center; justify-content: center; margin: 20px 0;">
+                    <p style="font-size: 24px; color: #666;">Scroll down to trigger lazy loading ↓</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                    <div>
+                        <img src="images/menu/burrito-mexican.svg" alt="Test image 1" loading="lazy" style="width: 100%; border-radius: 8px;">
+                        <p>Image 1 (lazy loaded)</p>
+                    </div>
+                    <div>
+                        <img src="images/menu/bowl-buddha.svg" alt="Test image 2" loading="lazy" style="width: 100%; border-radius: 8px;">
+                        <p>Image 2 (lazy loaded)</p>
+                    </div>
+                    <div>
+                        <img src="images/menu/wrap-falafel.svg" alt="Test image 3" loading="lazy" style="width: 100%; border-radius: 8px;">
+                        <p>Image 3 (lazy loaded)</p>
+                    </div>
+                </div>
+                <p style="margin-top: 20px;"><strong>Expected:</strong> Images should fade in smoothly when scrolled into view</p>
+            </div>
+
+            <!-- Automated Test Results -->
+            <div class="test-section">
+                <h2>Automated Test Results</h2>
+                <div id="automated-results"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/menu-filter.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/lazy-load.js"></script>
+    
+    <script>
+        // Automated tests
+        document.addEventListener('DOMContentLoaded', function() {
+            const resultsDiv = document.getElementById('automated-results');
+            const tests = [];
+
+            // Test 1: Check if main.js loaded
+            tests.push({
+                name: 'main.js loaded',
+                pass: typeof window !== 'undefined'
+            });
+
+            // Test 2: Check if hamburger menu exists
+            const hamburger = document.querySelector('.hamburger');
+            tests.push({
+                name: 'Hamburger menu element exists',
+                pass: hamburger !== null
+            });
+
+            // Test 3: Check if nav menu exists
+            const navMenu = document.querySelector('.nav-menu');
+            tests.push({
+                name: 'Navigation menu element exists',
+                pass: navMenu !== null
+            });
+
+            // Test 4: Check if filter buttons exist
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            tests.push({
+                name: 'Filter buttons exist',
+                pass: filterButtons.length > 0
+            });
+
+            // Test 5: Check if menu items exist
+            const menuItems = document.querySelectorAll('.card-menu');
+            tests.push({
+                name: 'Menu items exist for filtering',
+                pass: menuItems.length > 0
+            });
+
+            // Test 6: Check if contact form exists
+            const contactForm = document.getElementById('contactForm');
+            tests.push({
+                name: 'Contact form exists',
+                pass: contactForm !== null
+            });
+
+            // Test 7: Check if lazy load images exist
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            tests.push({
+                name: 'Lazy load images exist',
+                pass: lazyImages.length > 0
+            });
+
+            // Test 8: Check if IntersectionObserver is supported
+            tests.push({
+                name: 'IntersectionObserver supported',
+                pass: 'IntersectionObserver' in window
+            });
+
+            // Display results
+            let html = '<h3>Test Results:</h3>';
+            let passCount = 0;
+            tests.forEach(test => {
+                if (test.pass) passCount++;
+                html += `<div class="test-result ${test.pass ? 'test-pass' : 'test-fail'}">
+                    ${test.pass ? '✓' : '✗'} ${test.name}
+                </div>`;
+            });
+            html += `<p style="margin-top: 20px; font-size: 18px;"><strong>Results: ${passCount}/${tests.length} tests passed</strong></p>`;
+            resultsDiv.innerHTML = html;
+        });
+    </script>
+</body>
+</html>

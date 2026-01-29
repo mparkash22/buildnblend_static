@@ -1,0 +1,1173 @@
+/* Responsive Design - Media Queries */
+
+/* ========================================
+   TABLET (768px - 1199px)
+   ======================================== */
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    /* Grid adjustments - Tablet: 2 columns */
+    .benefits-grid,
+    .menu-grid,
+    .values-grid,
+    .dietary-options-grid,
+    .gallery-grid,
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Hero adjustments */
+    .hero-image {
+        width: 40%;
+    }
+    
+    /* Slider adjustments for tablet */
+    .slider-container {
+        width: 380px; /* Slightly smaller than desktop but larger than mobile */
+        height: 380px;
+    }
+    
+    /* Hide pause/play button on tablets for cleaner touch experience */
+    .slider-control {
+        display: none;
+    }
+}
+
+/* ========================================
+   MOBILE (320px - 767px)
+   ======================================== */
+
+@media (max-width: 767px) {
+    /* Typography adjustments handled in variables.css */
+    
+    /* Grid adjustments - Mobile: all grids become single column */
+    .benefits-grid,
+    .menu-grid,
+    .values-grid,
+    .testimonials-grid,
+    .gallery-grid,
+    .tagline-explanation,
+    .dietary-options-grid,
+    .sourcing-grid,
+    .nutrition-tables,
+    .location-info-grid,
+    .location-gallery-grid,
+    .events-grid,
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Tagline section */
+    .tagline-main {
+        font-size: 2rem;
+    }
+    
+    .tagline-explanation {
+        gap: var(--space-xl);
+    }
+    
+    /* Hero section */
+    .hero {
+        min-height: 80vh;
+        flex-direction: column;
+        text-align: center;
+        /* Mobile fallback to lighter gradient */
+        background: linear-gradient(135deg, #E8F5E0 0%, #9ACD32 100%);
+    }
+    
+    .hero-container {
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-image {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: var(--space-xl);
+    }
+    
+    /* Hero Image Slider - Mobile Responsive */
+    .hero-image-slider {
+        width: 100%;
+        margin-top: var(--space-xl);
+        justify-content: center;
+    }
+    
+    .slider-container {
+        width: 350px; /* Increased for better image visibility */
+        height: 350px;
+        margin: 0 auto;
+    }
+    
+    .slide {
+        border: none; /* No border for seamless integration */
+        box-shadow: 
+            0 12px 30px rgba(0, 0, 0, 0.12), /* Softer mobile shadow */
+            0 4px 15px rgba(27, 67, 50, 0.08); /* Very subtle green tint */
+    }
+    
+    .slider-nav {
+        bottom: -50px;
+        gap: var(--space-sm);
+    }
+    
+    .nav-dot {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .slider-control {
+        top: -40px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .slider-control svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    /* Navigation - Mobile menu */
+    .hamburger {
+        display: flex;
+    }
+    
+    /* Logo and brand name adjustments for mobile */
+    .logo a {
+        gap: var(--space-sm);
+    }
+    
+    .logo img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+    
+    .logo .brand-name {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    
+    /* Footer brand name for mobile */
+    .footer-logo .brand-name-footer {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .footer-tagline {
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+        margin-top: var(--space-xs);
+    }
+    
+    .nav-menu ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: var(--color-dark-green);
+        flex-direction: column;
+        padding: var(--space-4xl) var(--space-xl);
+        transition: right var(--transition-base);
+        gap: var(--space-lg);
+    }
+    
+    .nav-menu.open ul {
+        right: 0;
+    }
+    
+    .nav-link {
+        color: white;
+        font-size: 1.2rem;
+    }
+    
+    .nav-link.active {
+        color: var(--color-gold);
+    }
+    
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+    
+    .footer-section h4 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .footer-section p {
+        font-size: 13px;
+    }
+    
+    .footer-section a {
+        font-size: 13px;
+    }
+    
+    .footer-logo .brand-name-footer {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .footer-bottom {
+        padding-top: 20px;
+        margin-top: 24px;
+    }
+    
+    .footer-bottom p {
+        font-size: 12px;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+    
+    /* Forms - Full-width with adjusted padding for mobile */
+    .form-input,
+    .form-textarea,
+    .form-select {
+        font-size: 16px; /* Prevent zoom on iOS */
+        width: 100%;
+        padding: var(--space-md); /* 16px padding for comfortable touch */
+    }
+    
+    .form-group {
+        margin-bottom: var(--space-lg); /* Adequate spacing between form fields */
+    }
+    
+    .form-textarea {
+        min-height: 120px; /* Ensure adequate space for text input */
+    }
+    
+    /* Buttons */
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero-buttons {
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    /* Touch targets - ensure minimum 48x48px for all interactive elements */
+    .btn,
+    .nav-link,
+    .form-input,
+    .form-select,
+    .form-textarea,
+    .filter-btn,
+    .social-link,
+    button,
+    a.card,
+    input[type="submit"],
+    input[type="button"],
+    input[type="checkbox"],
+    input[type="radio"] {
+        min-height: 48px;
+    }
+    
+    .btn,
+    .filter-btn,
+    .social-link,
+    button,
+    input[type="submit"],
+    input[type="button"] {
+        min-width: 48px;
+    }
+    
+    /* Ensure clickable card areas are large enough */
+    .card {
+        min-height: 48px;
+    }
+    
+    /* Checkbox and radio buttons need larger touch targets */
+    input[type="checkbox"],
+    input[type="radio"] {
+        min-width: 24px;
+        min-height: 24px;
+        margin: 12px; /* Add margin to create 48x48px touch area */
+    }
+    
+    /* Card adjustments */
+    .card {
+        padding: var(--space-lg);
+    }
+    
+    /* Section padding adjustments - consistent spacing system */
+    section {
+        padding: var(--section-padding-y) var(--section-padding-x);
+    }
+}
+
+/* ========================================
+   SMALL MOBILE (320px - 480px)
+   ======================================== */
+
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    /* Hero Image Slider - Very Small Mobile */
+    .slider-container {
+        width: 300px; /* Increased from 260px for better visibility */
+        height: 300px;
+    }
+    
+    .slider-nav {
+        bottom: -30px; /* Moved closer to slider */
+        gap: 6px; /* Smaller gap between dots */
+    }
+    
+    .nav-dot {
+        width: 8px; /* Smaller dots for very small screens */
+        height: 8px;
+        border-width: 1px;
+    }
+    
+    /* Keep pause/play button hidden on small mobile */
+    .slider-control {
+        display: none;
+    }
+}
+
+/* ========================================
+   LARGE DESKTOP (1400px+)
+   ======================================== */
+
+@media (min-width: 1400px) {
+    .container,
+    .hero-container,
+    .footer-container {
+        max-width: 1400px;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+    .site-header,
+    .site-footer,
+    .hamburger,
+    .btn {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: black;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+    
+    img {
+        max-width: 100%;
+        page-break-inside: avoid;
+    }
+}
+
+/* ========================================
+   MENU PAGE RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 767px) {
+    /* Menu filter section */
+    .menu-filter-section {
+        position: static;
+        padding: var(--space-lg) var(--space-md);
+    }
+    
+    .filter-buttons {
+        gap: var(--space-sm);
+    }
+    
+    .filter-btn {
+        padding: var(--space-sm) var(--space-lg);
+        font-size: 0.9rem;
+    }
+    
+    /* Menu hero */
+    .menu-hero {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .menu-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Build Your Meal CTA */
+    .build-meal-cta {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .cta-content h2 {
+        font-size: var(--font-size-h2);
+    }
+    
+    .cta-content p {
+        font-size: 1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   NUTRITION PAGE RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 1199px) {
+    /* Philosophy section - tablet adjustments */
+    .philosophy-text {
+        max-width: 1000px;
+        padding: 0 var(--space-lg);
+    }
+    
+    .philosophy-text p {
+        font-size: 1.05rem;
+    }
+    
+    /* Dietary options grid - 2 columns on tablet */
+    .dietary-options-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Sourcing grid - 2 columns on tablet */
+    .sourcing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Nutrition tables - 2 columns on tablet */
+    .nutrition-tables {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Benefits grid - 2 columns on tablet */
+    .health-benefits-section .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    /* Nutrition hero */
+    .nutrition-hero {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .nutrition-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Philosophy section */
+    .nutrition-philosophy-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .philosophy-text {
+        max-width: 100%;
+        padding: 0 var(--space-md);
+    }
+    
+    .philosophy-text h3 {
+        font-size: var(--font-size-h4);
+        margin-top: var(--space-2xl);
+    }
+    
+    .philosophy-text p {
+        font-size: 1rem;
+        text-align: left;
+        line-height: 1.7;
+    }
+    
+    /* Dietary options - single column on mobile */
+    .dietary-options-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .dietary-options-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .card-dietary {
+        padding: 32px 24px;
+    }
+    
+    .card-dietary h3 {
+        font-size: 22px;
+    }
+    
+    .card-dietary p {
+        font-size: 15px;
+    }
+    
+    /* Sourcing section - single column on mobile */
+    .ingredient-sourcing-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .sourcing-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .sourcing-item {
+        padding: var(--space-lg);
+    }
+    
+    /* Nutrition tables - single column on mobile */
+    .nutritional-data-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .nutrition-tables {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .nutrition-table-wrapper {
+        padding: var(--space-lg);
+    }
+    
+    .nutrition-table-wrapper h3 {
+        font-size: 1rem;
+    }
+    
+    .nutrition-table {
+        font-size: 0.85rem;
+    }
+    
+    .nutrition-table th,
+    .nutrition-table td {
+        padding: var(--space-sm);
+    }
+    
+    .nutrition-info-box {
+        padding: var(--space-lg);
+    }
+    
+    .nutrition-info-box h3 {
+        font-size: var(--font-size-h4);
+    }
+    
+    /* Health benefits - single column on mobile */
+    .health-benefits-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .health-benefits-section .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .benefit-item {
+        padding: var(--space-lg);
+    }
+    
+    .benefit-icon {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .benefits-disclaimer {
+        padding: var(--space-lg);
+    }
+}
+
+/* ========================================
+   ABOUT US PAGE RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 1199px) {
+    /* Vision and Mission grid - 2 columns on tablet */
+    .vision-mission-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+    
+    /* Why We Exist section - tablet adjustments */
+    .why-exist-content {
+        max-width: 1000px;
+        padding: 0 var(--space-lg);
+    }
+    
+    .why-exist-paragraph {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Founder story section */
+    .founder-story-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .founder-story-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+        /* Stack image above text on mobile for better visual flow */
+        grid-template-areas: 
+            "image"
+            "text";
+    }
+    
+    .founder-text {
+        grid-area: text;
+        padding-right: 0;
+        text-align: left;
+    }
+    
+    .founder-image {
+        grid-area: image;
+        margin-bottom: var(--space-lg);
+    }
+    
+    .founder-text h2 {
+        font-size: var(--font-size-h3);
+        text-align: center;
+        margin-bottom: var(--space-lg);
+    }
+    
+    .founder-text p {
+        font-size: 1rem;
+    }
+    
+    /* Vision and Mission section */
+    .vision-mission-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .vision-mission-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .vision-card,
+    .mission-card {
+        padding: var(--space-lg);
+    }
+    
+    .vision-card h2,
+    .mission-card h2 {
+        font-size: var(--font-size-h4);
+    }
+    
+    /* Why We Exist section */
+    .why-exist-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .why-exist-content {
+        max-width: 100%;
+        padding: 0 var(--space-md);
+    }
+    
+    .why-exist-content h2 {
+        font-size: var(--font-size-h3);
+    }
+    
+    .why-exist-paragraph {
+        font-size: 1rem;
+        text-align: left;
+        line-height: 1.7;
+    }
+    
+    /* Core Values section */
+    .core-values-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+}
+
+/* ========================================
+   LOCATIONS PAGE RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 1199px) {
+    /* Location info grid - 2 columns on tablet */
+    .location-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Location gallery - 2 columns on tablet */
+    .location-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+/* ========================================
+   DESKTOP STYLES (1024px and above)
+   ======================================== */
+
+@media (min-width: 1024px) {
+    /* Coming soon grid - 3 columns on desktop */
+    .coming-soon-section .coming-soon-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: var(--space-xl) !important;
+        display: grid !important;
+    }
+}
+
+/* ========================================
+   TABLET STYLES (768px - 1023px)
+   ======================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Coming soon grid - 2 columns on tablet */
+    .coming-soon-section .coming-soon-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--space-lg) !important;
+        display: grid !important;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Page header */
+    .page-header {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .page-header h1 {
+        font-size: var(--font-size-h2);
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    /* Location info section */
+    .location-info-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .location-info-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .location-card {
+        padding: 32px 24px;
+    }
+    
+    .location-card .card-icon {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .location-card h2 {
+        font-size: 22px;
+    }
+    
+    .location-card p {
+        font-size: 15px;
+    }
+    
+    /* Map section */
+    .map-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .map-section h2 {
+        font-size: var(--font-size-h3);
+        margin-bottom: var(--space-xl);
+    }
+    
+    .map-container iframe {
+        height: 300px;
+    }
+    
+    /* Location gallery section */
+    .location-gallery-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .location-gallery-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .gallery-item img {
+        aspect-ratio: 3 / 2;
+    }
+    
+    .gallery-caption {
+        padding: 20px 16px;
+        font-size: 16px;
+    }
+    }
+    
+    /* Coming soon section */
+    .coming-soon-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .coming-soon-content h2 {
+        font-size: var(--font-size-h3);
+    }
+    
+    .coming-soon-intro {
+        font-size: 1rem;
+        margin-bottom: var(--space-xl);
+    }
+    
+    .coming-soon-section .coming-soon-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-lg) !important;
+        margin-bottom: var(--space-xl);
+        display: grid !important;
+    }
+    
+    .coming-soon-card {
+        padding: var(--space-lg);
+    }
+    
+    .coming-soon-card h3 {
+        font-size: var(--font-size-h4);
+    }
+    
+    .coming-soon-cta-text {
+        font-size: 1rem;
+    }
+    
+    /* Reserve CTA section */
+    .reserve-cta-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .reserve-cta-content h2 {
+        font-size: var(--font-size-h3);
+    }
+    
+    .reserve-cta-content > p {
+        font-size: 1rem;
+    }
+    
+    .reserve-cta-content .btn {
+        width: 100%;
+    }
+    
+    .reserve-note {
+        margin-top: var(--space-md);
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .location-card .card-icon {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .hours-list {
+        font-size: 0.9rem;
+    }
+    
+    .hours-row {
+        flex-direction: column;
+        gap: var(--space-xs);
+        text-align: center;
+    }
+}
+
+/* ========================================
+   COMMUNITY PAGE RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 1199px) {
+    /* Testimonials grid - 2 columns on tablet */
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Instagram grid - 2 columns on tablet */
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Events grid - 2 columns on tablet */
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Blog grid - 2 columns on tablet */
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Newsletter content - single column on tablet */
+    .newsletter-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+}
+
+@media (max-width: 767px) {
+    /* Community hero section */
+    .community-hero-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .community-hero-section .section-title h1 {
+        font-size: var(--font-size-h2);
+    }
+    
+    .community-hero-section .section-title p {
+        font-size: 1rem;
+    }
+    
+    /* Testimonials section */
+    .testimonials-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .testimonial-card {
+        padding: var(--space-lg);
+    }
+    
+    .testimonial-image {
+        width: 120px;
+        height: 120px;
+        margin-bottom: var(--space-md);
+    }
+    
+    .testimonial-text {
+        font-size: 0.95rem;
+        margin-bottom: var(--space-md);
+    }
+    
+    .testimonial-author h4 {
+        font-size: 1rem;
+    }
+    
+    .testimonial-author p {
+        font-size: 0.85rem;
+    }
+    
+    /* Instagram feed section */
+    .instagram-feed-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-sm);
+        margin-bottom: var(--space-lg);
+    }
+    
+    .instagram-overlay {
+        font-size: 0.9rem;
+        gap: var(--space-md);
+    }
+    
+    .instagram-cta .btn {
+        width: 100%;
+    }
+    
+    /* Events section */
+    .events-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .event-card {
+        flex-direction: column;
+        padding: var(--space-lg);
+        gap: var(--space-md);
+    }
+    
+    .event-date {
+        min-width: 100%;
+        padding: var(--space-lg);
+    }
+    
+    .event-day {
+        font-size: 2.5rem;
+    }
+    
+    .event-month {
+        font-size: 1rem;
+    }
+    
+    .event-content h3 {
+        font-size: var(--font-size-h4);
+    }
+    
+    .event-time {
+        font-size: 0.9rem;
+    }
+    
+    .event-description {
+        font-size: 0.95rem;
+        margin-bottom: var(--space-md);
+    }
+    
+    .event-card .btn {
+        width: 100%;
+    }
+    
+    /* Blog section */
+    .blog-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .blog-image {
+        height: 180px;
+    }
+    
+    .blog-content {
+        padding: var(--space-md);
+    }
+    
+    .blog-category {
+        font-size: 0.75rem;
+        padding: 4px var(--space-sm);
+        margin-bottom: var(--space-sm);
+    }
+    
+    .blog-content h3 {
+        font-size: var(--font-size-h4);
+        margin-bottom: var(--space-sm);
+    }
+    
+    .blog-excerpt {
+        font-size: 0.95rem;
+        margin-bottom: var(--space-md);
+    }
+    
+    .blog-meta {
+        font-size: 0.8rem;
+        gap: var(--space-md);
+        margin-bottom: var(--space-sm);
+    }
+    
+    .blog-link {
+        font-size: 0.95rem;
+    }
+    
+    .blog-cta {
+        margin-top: var(--space-lg);
+    }
+    
+    .blog-cta .btn {
+        width: 100%;
+    }
+    
+    /* Newsletter section */
+    .newsletter-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .newsletter-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+    
+    .newsletter-text h2 {
+        font-size: var(--font-size-h3);
+        margin-bottom: var(--space-md);
+    }
+    
+    .newsletter-text > p {
+        font-size: 1rem;
+        margin-bottom: var(--space-md);
+    }
+    
+    .newsletter-benefits {
+        margin-bottom: var(--space-lg);
+    }
+    
+    .newsletter-benefits li {
+        font-size: 0.95rem;
+        margin-bottom: var(--space-xs);
+    }
+    
+    .newsletter-signup-form {
+        padding: var(--space-lg);
+    }
+    
+    .newsletter-signup-form .form-group {
+        margin-bottom: var(--space-md);
+    }
+    
+    .newsletter-signup-form .btn {
+        width: 100%;
+    }
+    
+    .checkbox-label {
+        font-size: 0.85rem;
+    }
+    
+    .checkbox-label span {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .testimonial-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .instagram-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .event-date {
+        padding: var(--space-md);
+    }
+    
+    .event-day {
+        font-size: 2rem;
+    }
+    
+    .blog-image {
+        height: 160px;
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "build-and-blend-website",
+  "version": "1.0.0",
+  "description": "Build & Blend Premium Wellness Website",
+  "scripts": {
+    "minify": "node scripts/minify.js",
+    "critical": "node scripts/critical-css.js",
+    "build": "npm run minify && npm run critical"
+  },
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "terser": "^5.26.0",
+    "critical": "^6.0.0"
+  }
+}

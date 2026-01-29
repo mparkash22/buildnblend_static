@@ -1,0 +1,11 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="180" height="180" fill="#1B4332"/>
+  
+  <!-- Neon ring effect -->
+  <circle cx="90" cy="90" r="60" stroke="#9ACD32" stroke-width="4" opacity="0.6"/>
+  <circle cx="90" cy="90" r="55" stroke="#9ACD32" stroke-width="3" opacity="0.8"/>
+  
+  <!-- Gold "B" -->
+  <text x="55" y="115" font-family="Segoe UI, sans-serif" font-size="70" font-weight="700" fill="#D4AF37">B</text>
+</svg>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Build & Blend - Premium healthy fusion QSR in Delhi. Customizable Mexican, Mediterranean, and Indian fusion cuisine. Build your perfect meal, thrive every day.">
+    <meta name="keywords" content="healthy restaurant Delhi, fusion cuisine, customizable meals, wellness food, Mexican food Delhi, Mediterranean food Delhi">
+    <meta name="author" content="Build & Blend">
+    <title>Build & Blend - Build Your Perfect Meal. Thrive Every Day.</title>
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.svg">
+    
+    <!-- LocalBusiness Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Build & Blend",
+        "description": "Premium healthy fusion QSR in Delhi specializing in customizable Mexican, Mediterranean, and Indian fusion cuisine. Build your perfect meal, thrive every day.",
+        "image": "https://buildandblend.in/images/hero/featured-dish.svg",
+        "url": "https://buildandblend.in",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Main Road",
+            "addressLocality": "Satya Niketan",
+            "addressRegion": "Delhi",
+            "postalCode": "110021",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 28.5355,
+            "longitude": 77.1910
+        },
+        "telephone": "+91-XXXXX-XXXXX",
+        "email": "hello@buildandblend.in",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+                "opens": "11:00",
+                "closes": "22:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Friday", "Saturday"],
+                "opens": "11:00",
+                "closes": "23:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "11:00",
+                "closes": "22:00"
+            }
+        ],
+        "servesCuisine": ["Mexican", "Mediterranean", "Indian", "Fusion", "Healthy", "Vegetarian", "Vegan"],
+        "priceRange": "$$",
+        "menu": "https://buildandblend.in/menu.html",
+        "acceptsReservations": "False",
+        "hasMenu": {
+            "@type": "Menu",
+            "hasMenuSection": [
+                {
+                    "@type": "MenuSection",
+                    "name": "Burritos",
+                    "description": "Customizable burritos with Mexican, Mediterranean, and Indian fusion flavors"
+                },
+                {
+                    "@type": "MenuSection",
+                    "name": "Bowls",
+                    "description": "Build your perfect bowl with fresh ingredients and global flavors"
+                },
+                {
+                    "@type": "MenuSection",
+                    "name": "Wraps & Shawarma",
+                    "description": "Mediterranean-inspired wraps and shawarma with premium ingredients"
+                },
+                {
+                    "@type": "MenuSection",
+                    "name": "Tacos",
+                    "description": "Fusion tacos with authentic spices and fresh vegetables"
+                },
+                {
+                    "@type": "MenuSection",
+                    "name": "Falafel & Chickpea",
+                    "description": "Mediterranean classics with Indian fusion twists"
+                },
+                {
+                    "@type": "MenuSection",
+                    "name": "Beverages",
+                    "description": "Fresh juices, smoothies, and wellness drinks"
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+</head>
+<body>
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.svg" alt="Build & Blend - Mix Match Thrive">
+                    <span class="brand-name">BUILD & BLEND</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="nutrition.html" class="nav-link">Nutrition</a></li>
+                    <li><a href="locations.html" class="nav-link">Locations</a></li>
+                    <li><a href="community.html" class="nav-link">Community</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Build Your Perfect Meal. Thrive Every Day.</h1>
+                    <p class="hero-subheading">Experience the fusion of Mexican, Mediterranean, and Indian flavors. Customize every meal to match your wellness goals and taste preferences.</p>
+                    <div class="hero-buttons">
+                        <a href="menu.html" class="btn btn-primary">Order Now</a>
+                        <a href="menu.html" class="btn btn-secondary">Explore Menu</a>
+                    </div>
+                </div>
+                <div class="hero-image-slider" role="region" aria-label="Featured dishes slideshow">
+                    <div class="slider-container">
+                        <div class="slide active" aria-hidden="false">
+                            <img src="images/hero/featured-dish.svg" alt="Colorful burrito bowl with fresh vegetables, cilantro rice, and vibrant toppings" loading="eager">
+                        </div>
+                        <div class="slide" aria-hidden="true">
+                            <img src="images/hero/signature-burrito.svg" alt="Signature Mexican burrito with Indian spiced black beans and fresh cilantro" loading="lazy">
+                        </div>
+                        <div class="slide" aria-hidden="true">
+                            <img src="images/hero/mediterranean-wrap.svg" alt="Mediterranean wrap with falafel, hummus, and fresh vegetables" loading="lazy">
+                        </div>
+                        <div class="slide" aria-hidden="true">
+                            <img src="images/hero/green-smoothie.svg" alt="Fresh green smoothie with spinach, mango, and wellness ingredients" loading="lazy">
+                        </div>
+                        <div class="slide" aria-hidden="true">
+                            <img src="images/hero/fusion-bowl.svg" alt="Indian fusion bowl with quinoa, paneer, and colorful vegetables" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation dots -->
+                    <div class="slider-nav" role="tablist" aria-label="Slideshow navigation">
+                        <button class="nav-dot active" role="tab" aria-selected="true" aria-label="Show slide 1 - Burrito Bowl" data-slide="0"></button>
+                        <button class="nav-dot" role="tab" aria-selected="false" aria-label="Show slide 2 - Signature Burrito" data-slide="1"></button>
+                        <button class="nav-dot" role="tab" aria-selected="false" aria-label="Show slide 3 - Mediterranean Wrap" data-slide="2"></button>
+                        <button class="nav-dot" role="tab" aria-selected="false" aria-label="Show slide 4 - Green Smoothie" data-slide="3"></button>
+                        <button class="nav-dot" role="tab" aria-selected="false" aria-label="Show slide 5 - Fusion Bowl" data-slide="4"></button>
+                    </div>
+                    
+                    <!-- Pause/Play button for accessibility -->
+                    <button class="slider-control" aria-label="Pause slideshow" data-action="pause">
+                        <span class="sr-only">Pause slideshow</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M6 4H10V20H6V4ZM14 4H18V20H14V4Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Choose Build & Blend</h2>
+                    <p>Experience wellness through customization, quality, and authentic fusion flavors</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="card card-feature">
+                        <div class="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>100% Customizable</h3>
+                        <p>Build your perfect meal from scratch. Choose your base, protein, toppings, and dietary modifications to match your exact preferences.</p>
+                    </div>
+                    
+                    <div class="card card-feature">
+                        <div class="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Authentic Fusion</h3>
+                        <p>Experience respectful blending of Mexican, Mediterranean, and Indian culinary traditions with authentic spices and techniques.</p>
+                    </div>
+                    
+                    <div class="card card-feature">
+                        <div class="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Fresh Daily</h3>
+                        <p>All ingredients sourced fresh daily from trusted suppliers. No preservatives, no compromises on quality.</p>
+                    </div>
+                    
+                    <div class="card card-feature">
+                        <div class="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Dietary Flexibility</h3>
+                        <p>Vegan, high-protein, gluten-free, low-calorie, or keto-friendly. Every meal adapts to your wellness journey. <a href="nutrition.html">Learn about our dietary options</a>.</p>
+                    </div>
+                    
+                    <div class="card card-feature">
+                        <div class="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13M16 3.13C16.8604 3.3503 17.623 3.8507 18.1676 4.55231C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Community Focused</h3>
+                        <p>Join a community of wellness enthusiasts. Share recipes, attend workshops, and thrive together. <a href="community.html">Join our community</a>.</p>
+                    </div>
+                    
+                    <div class="card card-feature">
+                        <div class="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Premium Quality</h3>
+                        <p>15 years of culinary expertise from Singapore to Delhi. Every dish crafted with precision and care. <a href="about.html">Read our story</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Tagline Section -->
+        <section class="tagline-section">
+            <div class="container">
+                <div class="tagline-content">
+                    <h2 class="tagline-main">Mix • Match • Thrive</h2>
+                    <div class="tagline-explanation">
+                        <div class="tagline-item">
+                            <div class="icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 2L7 6L3 10L7 14L3 18L7 22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21 6H11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21 12H11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21 18H11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Build Your Meal</h3>
+                            <p>Blend cultures respectfully. We honor Mexican, Mediterranean, and Indian culinary traditions, bringing authentic flavors together in harmony. Every ingredient, every choice—yours to build.</p>
+                        </div>
+                        <div class="tagline-item">
+                            <div class="icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.7088 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.76489 14.1003 1.98232 16.07 2.86" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Match Your Needs</h3>
+                            <p>Customization is key. Every meal adapts to your unique preferences, dietary needs, and wellness goals. Your body, your choice. Match your meal to your lifestyle.</p>
+                        </div>
+                        <div class="tagline-item">
+                            <div class="icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Thrive Daily</h3>
+                            <p>Energized living starts here. Wellness isn't deprivation—it's daily self-love through nourishing, delicious food that fuels your best life. Thrive every single day.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-logo">
+            <span class="brand-name-footer">BUILD & BLEND</span>
+            <p class="footer-tagline">MIX • <span class="tagline-match">MATCH</span> • THRIVE</p>
+        </div>
+        <div class="footer-container">
+            <h3 class="sr-only">Footer Navigation</h3>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="nutrition.html">Nutrition</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <ul class="social-links">
+                    <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                    <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                    <li><a href="#" aria-label="WhatsApp">WhatsApp</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" aria-label="Email address">
+                    <button type="submit" aria-label="Subscribe to newsletter">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Phone: +91-XXXXX-XXXXX</p>
+                <p>Email: hello@buildandblend.in</p>
+                <p>Satya Niketan, New Delhi</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Build & Blend. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/lazy-load.js"></script>
+    <script src="js/hero-slider.js"></script>
+</body>
+</html>

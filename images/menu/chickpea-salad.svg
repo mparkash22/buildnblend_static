@@ -1,0 +1,7 @@
+<svg width="450" height="253" xmlns="http://www.w3.org/2000/svg">
+  <rect width="450" height="253" fill="#F8F7F2"/>
+  <circle cx="225" cy="126" r="80" fill="#1B4332" opacity="0.1"/>
+  <text x="225" y="120" font-family="Arial, sans-serif" font-size="24" fill="#1B4332" text-anchor="middle" font-weight="bold">Menu Item</text>
+  <text x="225" y="150" font-family="Arial, sans-serif" font-size="14" fill="#D4AF37" text-anchor="middle">chickpea-salad</text>
+  <text x="225" y="180" font-family="Arial, sans-serif" font-size="12" fill="#1B4332" text-anchor="middle" opacity="0.6">450x253 • 16:9</text>
+</svg>

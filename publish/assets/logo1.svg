@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <!-- Circular background with gradient -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9ACD32;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7DD3C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2D5F4F;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main circular logo with enhanced visibility -->
+  <circle cx="60" cy="60" r="55" fill="url(#logoGradient)" filter="url(#glow)" opacity="1"/>
+  
+  <!-- Inner design elements representing fusion cuisine -->
+  <!-- Bowl/plate base - more visible -->
+  <ellipse cx="60" cy="70" rx="35" ry="8" fill="#FFFFFF" opacity="0.6"/>
+  
+  <!-- Food elements - representing fusion with enhanced visibility -->
+  <!-- Mexican element (chili/pepper) -->
+  <path d="M35 45 Q40 35 45 45 Q50 55 45 65 Q40 75 35 65 Q30 55 35 45" fill="#D4AF37" opacity="1"/>
+  
+  <!-- Mediterranean element (olive branch) -->
+  <path d="M75 40 Q80 35 85 40 L85 50 Q80 55 75 50 Z" fill="#9ACD32" opacity="1"/>
+  <circle cx="82" cy="42" r="3" fill="#2D5F4F" opacity="0.8"/>
+  <circle cx="78" cy="48" r="2.5" fill="#2D5F4F" opacity="0.8"/>
+  
+  <!-- Indian element (spice/grain) -->
+  <circle cx="45" cy="75" r="4" fill="#D4AF37" opacity="0.9"/>
+  <circle cx="52" cy="72" r="3" fill="#9ACD32" opacity="0.9"/>
+  <circle cx="48" cy="68" r="2.5" fill="#7DD3C0" opacity="0.9"/>
+  
+  <!-- Central fusion symbol with better visibility -->
+  <circle cx="60" cy="55" r="12" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.8"/>
+  <circle cx="60" cy="55" r="6" fill="#FFFFFF" opacity="0.6"/>
+  
+  <!-- Text elements integrated into design with enhanced visibility -->
+  <text x="60" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF" opacity="1">BUILD & BLEND</text>
+</svg>

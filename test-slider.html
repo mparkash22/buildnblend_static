@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Slider Test</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .test-hero {
+            min-height: 60vh;
+            background: var(--gradient-hero-light);
+            display: flex;
+            align-items: center;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .test-hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+        .test-hero-content {
+            max-width: 600px;
+            z-index: 2;
+        }
+        .test-hero-content h1 {
+            color: var(--color-charcoal);
+            margin-bottom: 20px;
+        }
+        .debug-info {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info">
+        <div>Slider Status: <span id="slider-status">Loading...</span></div>
+        <div>Slides Found: <span id="slides-count">0</span></div>
+        <div>Current Slide: <span id="current-slide">0</span></div>
+    </div>
+
+    <section class="test-hero">
+        <div class="test-hero-container">
+            <div class="test-hero-content">
+                <h1>Hero Slider Test</h1>
+                <p>Testing the hero image slider functionality</p>
+            </div>
+            <div class="hero-image-slider" role="region" aria-label="Featured dishes slideshow">
+                <div class="slider-container">
+                    <div class="slide active" aria-hidden="false">
+                        <img src="images/hero/featured-dish.svg" alt="Featured dish" loading="eager">
+                    </div>
+                    <div class="slide" aria-hidden="true">
+                        <img src="images/hero/signature-burrito.svg" alt="Signature burrito" loading="lazy">
+                    </div>
+                    <div class="slide" aria-hidden="true">
+                        <img src="images/hero/mediterranean-wrap.svg" alt="Mediterranean wrap" loading="lazy">
+                    </div>
+                    <div class="slide" aria-hidden="true">
+                        <img src="images/hero/green-smoothie.svg" alt="Green smoothie" loading="lazy">
+                    </div>
+                    <div class="slide" aria-hidden="true">
+                        <img src="images/hero/fusion-bowl.svg" alt="Fusion bowl" loading="lazy">
+                    </div>
+                </div>
+                
+                <!-- Navigation dots -->
+                <div class="slider-nav" role="tablist" aria-label="Slideshow navigation">
+                    <button class="nav-dot active" role="tab" aria-selected="true" aria-label="Show slide 1" data-slide="0"></button>
+                    <button class="nav-dot" role="tab" aria-selected="false" aria-label="Show slide 2" data-slide="1"></button>
+                    <button class="nav-dot" role="tab" aria-selected="false" aria-label="Show slide 3" data-slide="2"></button>
+                    <button class="nav-dot" role="tab" aria-selected="false" aria-label="Show slide 4" data-slide="3"></button>
+                    <button class="nav-dot" role="tab" aria-selected="false" aria-label="Show slide 5" data-slide="4"></button>
+                </div>
+                
+                <!-- Pause/Play button -->
+                <button class="slider-control" aria-label="Pause slideshow">
+                    <span class="sr-only">Pause slideshow</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 4H10V20H6V4ZM14 4H18V20H14V4Z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Debug version of hero slider
+        class TestHeroSlider {
+            constructor() {
+                console.log('TestHeroSlider constructor called');
+                this.slider = document.querySelector('.hero-image-slider');
+                this.statusEl = document.getElementById('slider-status');
+                this.slidesCountEl = document.getElementById('slides-count');
+                this.currentSlideEl = document.getElementById('current-slide');
+                
+                if (!this.slider) {
+                    this.updateStatus('No slider element found');
+                    return;
+                }
+                
+                this.slides = this.slider.querySelectorAll('.slide');
+                this.navDots = this.slider.querySelectorAll('.nav-dot');
+                this.controlButton = this.slider.querySelector('.slider-control');
+                
+                this.currentSlide = 0;
+                this.isPlaying = true;
+                this.autoRotateInterval = null;
+                this.autoRotateDelay = 3000; // 3 seconds for testing
+                
+                this.updateStatus('Initialized');
+                this.slidesCountEl.textContent = this.slides.length;
+                this.currentSlideEl.textContent = this.currentSlide + 1;
+                
+                this.init();
+            }
+            
+            updateStatus(status) {
+                if (this.statusEl) {
+                    this.statusEl.textContent = status;
+                }
+                console.log('Slider status:', status);
+            }
+            
+            init() {
+                if (this.slides.length === 0) {
+                    this.updateStatus('No slides found');
+                    return;
+                }
+                
+                this.setupEventListeners();
+                this.startAutoRotation();
+                this.updateStatus('Running');
+            }
+            
+            setupEventListeners() {
+                this.navDots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        this.goToSlide(index);
+                        this.resetAutoRotation();
+                    });
+                });
+                
+                if (this.controlButton) {
+                    this.controlButton.addEventListener('click', () => {
+                        this.togglePlayPause();
+                    });
+                }
+            }
+            
+            goToSlide(index) {
+                if (index < 0 || index >= this.slides.length) return;
+                
+                // Remove active class from current slide and nav dot
+                this.slides[this.currentSlide].classList.remove('active');
+                this.navDots[this.currentSlide].classList.remove('active');
+                
+                // Set new current slide
+                this.currentSlide = index;
+                
+                // Add active class to new slide and nav dot
+                this.slides[this.currentSlide].classList.add('active');
+                this.navDots[this.currentSlide].classList.add('active');
+                
+                this.currentSlideEl.textContent = this.currentSlide + 1;
+                console.log('Switched to slide:', this.currentSlide + 1);
+            }
+            
+            nextSlide() {
+                const nextIndex = (this.currentSlide + 1) % this.slides.length;
+                this.goToSlide(nextIndex);
+            }
+            
+            startAutoRotation() {
+                if (this.autoRotateInterval) {
+                    clearInterval(this.autoRotateInterval);
+                }
+                
+                this.autoRotateInterval = setInterval(() => {
+                    this.nextSlide();
+                }, this.autoRotateDelay);
+                
+                this.updateStatus('Auto-rotating');
+            }
+            
+            pauseAutoRotation() {
+                if (this.autoRotateInterval) {
+                    clearInterval(this.autoRotateInterval);
+                    this.autoRotateInterval = null;
+                }
+                this.updateStatus('Paused');
+            }
+            
+            resetAutoRotation() {
+                if (this.isPlaying) {
+                    this.pauseAutoRotation();
+                    this.startAutoRotation();
+                }
+            }
+            
+            togglePlayPause() {
+                this.isPlaying = !this.isPlaying;
+                
+                if (this.isPlaying) {
+                    this.startAutoRotation();
+                } else {
+                    this.pauseAutoRotation();
+                }
+            }
+        }
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM loaded, initializing test slider...');
+            new TestHeroSlider();
+        });
+    </script>
+</body>
+</html>

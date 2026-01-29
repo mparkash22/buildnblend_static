@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Cards Test - White Background</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        /* Force override any cached styles */
+        .blog-card {
+            background: #FFFFFF !important;
+            border-radius: 24px 8px 24px 8px !important;
+            box-shadow: 0 8px 24px rgba(45, 95, 79, 0.15) !important;
+            border: none !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+        
+        .blog-card:nth-child(1) {
+            border-radius: 32px 8px 32px 8px !important;
+            transform: rotate(-0.5deg) !important;
+        }
+
+        .blog-card:nth-child(2) {
+            border-radius: 8px 28px 8px 28px !important;
+            transform: rotate(0.3deg) !important;
+        }
+
+        .blog-card:nth-child(3) {
+            border-radius: 20px 20px 8px 32px !important;
+            transform: rotate(-0.4deg) !important;
+        }
+        
+        .blog-content h3 {
+            color: #1A3A3A !important;
+        }
+        
+        .blog-excerpt {
+            color: #5A6B7B !important;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; padding: 20px; color: #1A3A3A;">Blog Cards Test - Should Show White Cards with Organic Shapes</h1>
+    
+    <!-- Wellness Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Wellness Blog</h2>
+                <p>Tips, recipes, and insights for your wellness journey</p>
+            </div>
+            <div class="blog-grid">
+                <article class="card blog-card">
+                    <div class="blog-image">
+                        <img src="images/community/blog-1.svg" alt="Meal prep containers with colorful healthy food" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Nutrition</span>
+                        <h3>5 Meal Prep Strategies That Actually Work</h3>
+                        <p class="blog-excerpt">Discover practical meal prep techniques that save time without sacrificing flavor or nutrition. Perfect for busy professionals and students.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">January 10, 2025</span>
+                            <span class="blog-read-time">5 min read</span>
+                        </div>
+                        <a href="#" class="blog-link">Discover Meal Prep Strategies →</a>
+                    </div>
+                </article>
+
+                <article class="card blog-card">
+                    <div class="blog-image">
+                        <img src="images/community/blog-2.svg" alt="Colorful spices and herbs" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Culture</span>
+                        <h3>The Art of Fusion: Respecting Culinary Traditions</h3>
+                        <p class="blog-excerpt">How we blend Mexican, Mediterranean, and Indian cuisines while honoring each culture's authentic flavors and techniques.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">January 5, 2025</span>
+                            <span class="blog-read-time">7 min read</span>
+                        </div>
+                        <a href="#" class="blog-link">Explore Fusion Cuisine →</a>
+                    </div>
+                </article>
+
+                <article class="card blog-card">
+                    <div class="blog-image">
+                        <img src="images/community/blog-3.svg" alt="Person exercising outdoors" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Wellness</span>
+                        <h3>Why Wellness Isn't About Restriction</h3>
+                        <p class="blog-excerpt">Rethinking health as abundance rather than deprivation. Learn how to build sustainable wellness habits that actually stick.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">December 28, 2024</span>
+                            <span class="blog-read-time">6 min read</span>
+                        </div>
+                        <a href="#" class="blog-link">Learn About Wellness →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <div style="padding: 20px; text-align: center; background: #f0f0f0; margin-top: 20px;">
+        <h3>Expected Result:</h3>
+        <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+            <li>Blog cards: White background with organic rounded corners</li>
+            <li>Each card has slight rotation and unique border radius</li>
+            <li>Lime green category badges</li>
+            <li>Dark charcoal headings (#1A3A3A)</li>
+            <li>Medium gray text (#5A6B7B)</li>
+            <li>No dark green backgrounds anywhere</li>
+        </ul>
+    </div>
+</body>
+</html>

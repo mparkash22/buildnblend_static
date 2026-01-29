@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Build & Blend's customizable menu. Mexican, Mediterranean, and Indian fusion burritos, bowls, wraps, tacos, and more. Build your perfect meal.">
+    <meta name="keywords" content="healthy menu Delhi, customizable burritos, fusion bowls, Mexican food, Mediterranean food, vegan options Delhi">
+    <meta name="author" content="Build & Blend">
+    <title>Menu - Build & Blend | Customizable Fusion Cuisine</title>
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.svg">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+</head>
+<body>
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.svg" alt="Build & Blend - Mix Match Thrive">
+                    <span class="brand-name">BUILD & BLEND</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                    <li><a href="nutrition.html" class="nav-link">Nutrition</a></li>
+                    <li><a href="locations.html" class="nav-link">Locations</a></li>
+                    <li><a href="community.html" class="nav-link">Community</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Menu Hero Section -->
+        <section class="menu-hero">
+            <div class="container">
+                <h1>Our Menu</h1>
+                <p class="menu-hero-subtitle">Customize every meal to match your taste and wellness goals. Choose from authentic fusion flavors across Mexican, Mediterranean, and Indian traditions.</p>
+            </div>
+        </section>
+
+        <!-- Menu Filter Section -->
+        <section class="menu-filter-section">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all" aria-label="Show all menu items">All</button>
+                    <button class="filter-btn" data-category="burritos" aria-label="Show burritos only">Burritos</button>
+                    <button class="filter-btn" data-category="bowls" aria-label="Show bowls only">Bowls</button>
+                    <button class="filter-btn" data-category="wraps" aria-label="Show wraps and shawarma only">Wraps & Shawarma</button>
+                    <button class="filter-btn" data-category="tacos" aria-label="Show tacos only">Tacos</button>
+                    <button class="filter-btn" data-category="falafel" aria-label="Show falafel and chickpea dishes only">Falafel & Chickpea</button>
+                    <button class="filter-btn" data-category="beverages" aria-label="Show beverages only">Beverages</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Items Grid -->
+        <section class="menu-items-section">
+            <div class="container">
+                <h2 class="sr-only">Menu Items</h2>
+                <div class="menu-grid">
+                    <h3 class="sr-only">Available Dishes</h3>
+                    <!-- Burritos -->
+                    <div class="card card-menu" data-category="burritos">
+                        <img src="images/menu/burrito-mexican.svg" alt="Mexican burrito with cilantro rice, black beans, and fresh vegetables" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Mexican Burrito (Indian Spiced)</h4>
+                            <p class="card-menu-description">Cilantro rice, spiced black beans, fresh vegetables with authentic Indian spices</p>
+                            <p class="card-menu-price">₹249</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-menu" data-category="burritos">
+                        <img src="images/menu/burrito-mediterranean.svg" alt="Mediterranean burrito with quinoa, hummus, and roasted vegetables" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Mediterranean Burrito</h4>
+                            <p class="card-menu-description">Quinoa, creamy hummus, roasted vegetables, tahini drizzle</p>
+                            <p class="card-menu-price">₹269</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-menu" data-category="burritos">
+                        <img src="images/menu/burrito-paneer.svg" alt="Paneer tikka burrito with spiced paneer and mint chutney" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Paneer Tikka Burrito</h4>
+                            <p class="card-menu-description">Spiced paneer tikka, cilantro rice, mint chutney, crisp vegetables</p>
+                            <p class="card-menu-price">₹289</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <!-- Bowls -->
+                    <div class="card card-menu" data-category="bowls">
+                        <img src="images/menu/bowl-buddha.svg" alt="Buddha bowl with quinoa, roasted chickpeas, and colorful vegetables" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Buddha Bowl</h4>
+                            <p class="card-menu-description">Quinoa base, roasted chickpeas, rainbow vegetables, tahini dressing</p>
+                            <p class="card-menu-price">₹259</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-menu" data-category="bowls">
+                        <img src="images/menu/bowl-mexican.svg" alt="Mexican bowl with cilantro rice, black beans, and salsa" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Mexican Power Bowl</h4>
+                            <p class="card-menu-description">Cilantro rice, black beans, corn salsa, guacamole, lime crema</p>
+                            <p class="card-menu-price">₹249</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-menu" data-category="bowls">
+                        <img src="images/menu/bowl-mediterranean.svg" alt="Mediterranean bowl with falafel, hummus, and fresh vegetables" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Mediterranean Bowl</h4>
+                            <p class="card-menu-description">Brown rice, crispy falafel, hummus, cucumber, tomato, olives</p>
+                            <p class="card-menu-price">₹269</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-menu" data-category="bowls">
+                        <img src="images/menu/bowl-indian-fusion.svg" alt="Indian fusion bowl with tandoori vegetables and mint yogurt" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Indian Fusion Bowl</h4>
+                            <p class="card-menu-description">Jeera rice, tandoori vegetables, mint yogurt, pickled onions</p>
+                            <p class="card-menu-price">₹239</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <!-- Wraps & Shawarma -->
+                    <div class="card card-menu" data-category="wraps">
+                        <img src="images/menu/wrap-falafel.svg" alt="Falafel wrap with tahini sauce and fresh vegetables" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Falafel Wrap</h4>
+                            <p class="card-menu-description">Crispy falafel, tahini sauce, lettuce, tomato, pickled vegetables</p>
+                            <p class="card-menu-price">₹219</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-menu" data-category="wraps">
+                        <img src="images/menu/shawarma-paneer.svg" alt="Paneer shawarma with garlic sauce and vegetables" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Paneer Shawarma</h4>
+                            <p class="card-menu-description">Spiced paneer, garlic sauce, pickled vegetables, fresh herbs</p>
+                            <p class="card-menu-price">₹239</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-menu" data-category="wraps">
+                        <img src="images/menu/wrap-mediterranean.svg" alt="Mediterranean wrap with hummus and grilled vegetables" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Mediterranean Wrap</h4>
+                            <p class="card-menu-description">Hummus, grilled vegetables, olives, feta cheese, olive oil</p>
+                            <p class="card-menu-price">₹229</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <!-- Tacos -->
+                    <div class="card card-menu" data-category="tacos">
+                        <img src="images/menu/tacos-black-bean.svg" alt="Black bean tacos with salsa and guacamole" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Black Bean Tacos (3 pcs)</h4>
+                            <p class="card-menu-description">Spiced black beans, fresh salsa, guacamole, lime crema</p>
+                            <p class="card-menu-price">₹199</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-menu" data-category="tacos">
+                        <img src="images/menu/tacos-paneer.svg" alt="Paneer tikka tacos with mint chutney" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Paneer Tikka Tacos (3 pcs)</h4>
+                            <p class="card-menu-description">Tandoori paneer, mint chutney, pickled onions, cilantro</p>
+                            <p class="card-menu-price">₹219</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-menu" data-category="tacos">
+                        <img src="images/menu/tacos-chickpea.svg" alt="Chickpea tacos with tahini and vegetables" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Chickpea Tacos (3 pcs)</h4>
+                            <p class="card-menu-description">Roasted chickpeas, tahini drizzle, fresh vegetables, spices</p>
+                            <p class="card-menu-price">₹189</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <!-- Falafel & Chickpea -->
+                    <div class="card card-menu" data-category="falafel">
+                        <img src="images/menu/falafel-plate.svg" alt="Falafel plate with hummus, tahini, and pita bread" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Falafel Plate</h4>
+                            <p class="card-menu-description">Crispy falafel, hummus, tahini, fresh salad, warm pita bread</p>
+                            <p class="card-menu-price">₹249</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-menu" data-category="falafel">
+                        <img src="images/menu/chickpea-salad.svg" alt="Chickpea salad with Mediterranean vegetables" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Mediterranean Chickpea Salad</h4>
+                            <p class="card-menu-description">Roasted chickpeas, cucumber, tomato, olives, lemon dressing</p>
+                            <p class="card-menu-price">₹209</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-menu" data-category="falafel">
+                        <img src="images/menu/hummus-bowl.svg" alt="Hummus bowl with vegetables and olive oil" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Hummus Bowl</h4>
+                            <p class="card-menu-description">Creamy hummus, roasted vegetables, olive oil, warm pita</p>
+                            <p class="card-menu-price">₹229</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <!-- Beverages -->
+                    <div class="card card-menu" data-category="beverages">
+                        <img src="images/menu/smoothie-green.svg" alt="Green smoothie with spinach, mango, and banana" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Green Power Smoothie</h4>
+                            <p class="card-menu-description">Spinach, mango, banana, chia seeds, almond milk</p>
+                            <p class="card-menu-price">₹149</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-menu" data-category="beverages">
+                        <img src="images/menu/juice-fresh.svg" alt="Fresh pressed juice with seasonal fruits" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Fresh Pressed Juice</h4>
+                            <p class="card-menu-description">Seasonal fruits, no added sugar, pure wellness in a glass</p>
+                            <p class="card-menu-price">₹129</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-menu" data-category="beverages">
+                        <img src="images/menu/lassi-mango.svg" alt="Mango lassi with fresh yogurt" loading="lazy">
+                        <div class="card-menu-content">
+                            <h4 class="card-menu-title">Mango Lassi</h4>
+                            <p class="card-menu-description">Fresh mango, yogurt, cardamom, a touch of honey</p>
+                            <p class="card-menu-price">₹119</p>
+                            <a href="#" class="btn btn-primary">Customize</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Build Your Meal CTA Section -->
+        <section class="build-meal-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Build Your Perfect Meal</h2>
+                    <p>Every dish is fully customizable. Choose your base, protein, toppings, and dietary modifications to create a meal that's uniquely yours. Whether you're vegan, high-protein, gluten-free, or keto-friendly, we've got you covered.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">Start Your Order</a>
+                        <a href="nutrition.html" class="btn btn-secondary">View Nutrition Info</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-logo">
+            <span class="brand-name-footer">BUILD & BLEND</span>
+            <p class="footer-tagline">MIX • <span class="tagline-match">MATCH</span> • THRIVE</p>
+        </div>
+        <div class="footer-container">
+            <h3 class="sr-only">Footer Navigation</h3>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="nutrition.html">Nutrition</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <ul class="social-links">
+                    <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                    <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                    <li><a href="#" aria-label="WhatsApp">WhatsApp</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" aria-label="Email address">
+                    <button type="submit" aria-label="Subscribe to newsletter">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Phone: +91-XXXXX-XXXXX</p>
+                <p>Email: hello@buildandblend.in</p>
+                <p>Satya Niketan, New Delhi</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Build & Blend. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/menu-filter.js"></script>
+    <script src="js/lazy-load.js"></script>
+</body>
+</html>

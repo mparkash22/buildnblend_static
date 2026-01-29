@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Test - Build & Blend</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .test-section {
+            background-color: var(--color-cream);
+            padding: var(--space-2xl);
+            margin-bottom: var(--space-xl);
+        }
+        .test-info {
+            background-color: white;
+            padding: var(--space-lg);
+            border-radius: var(--radius-card);
+            margin-bottom: var(--space-lg);
+        }
+        .breakpoint-indicator {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: var(--color-dark-green);
+            color: white;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-small);
+            font-weight: var(--font-weight-bold);
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <div class="breakpoint-indicator">
+        <span id="breakpoint-text">Desktop</span>
+    </div>
+
+    <section class="test-section">
+        <h1>Responsive Design Test</h1>
+        <p>Resize your browser window to test responsive breakpoints: 320px (mobile), 768px (tablet), 1200px (desktop)</p>
+    </section>
+
+    <!-- Test Grid Systems -->
+    <section class="test-section">
+        <h2>Grid System Test (3-2-1 columns)</h2>
+        <div class="benefits-grid">
+            <div class="card card-feature">
+                <h3>Grid Item 1</h3>
+                <p>This grid should show 3 columns on desktop, 2 on tablet, 1 on mobile.</p>
+            </div>
+            <div class="card card-feature">
+                <h3>Grid Item 2</h3>
+                <p>Check the layout at different screen sizes.</p>
+            </div>
+            <div class="card card-feature">
+                <h3>Grid Item 3</h3>
+                <p>All spacing should be consistent.</p>
+            </div>
+            <div class="card card-feature">
+                <h3>Grid Item 4</h3>
+                <p>Typography should scale appropriately.</p>
+            </div>
+            <div class="card card-feature">
+                <h3>Grid Item 5</h3>
+                <p>Touch targets should be 48x48px minimum on mobile.</p>
+            </div>
+            <div class="card card-feature">
+                <h3>Grid Item 6</h3>
+                <p>Forms should be full-width on mobile.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Test Typography -->
+    <section class="test-section">
+        <h2>Typography Test</h2>
+        <div class="test-info">
+            <h1>H1 Heading (3.5rem desktop / 2rem mobile)</h1>
+            <h2>H2 Heading (2.5rem desktop / 1.75rem mobile)</h2>
+            <h3>H3 Heading (1.8rem desktop / 1.5rem mobile)</h3>
+            <h4>H4 Heading (1.3rem desktop / 1.2rem mobile)</h4>
+            <p>Body text should maintain 16px minimum on all devices for readability.</p>
+        </div>
+    </section>
+
+    <!-- Test Touch Targets -->
+    <section class="test-section">
+        <h2>Touch Target Test (48x48px minimum)</h2>
+        <div class="test-info">
+            <button class="btn btn-primary">Primary Button</button>
+            <button class="btn btn-secondary">Secondary Button</button>
+            <button class="btn btn-tertiary">Tertiary Button</button>
+        </div>
+    </section>
+
+    <!-- Test Forms -->
+    <section class="test-section">
+        <h2>Form Test (Full-width on mobile)</h2>
+        <div class="test-info">
+            <form>
+                <div class="form-group">
+                    <label class="form-label" for="test-name">Name</label>
+                    <input type="text" id="test-name" class="form-input" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="test-email">Email</label>
+                    <input type="email" id="test-email" class="form-input" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="test-message">Message</label>
+                    <textarea id="test-message" class="form-textarea" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Test Spacing Consistency -->
+    <section class="test-section">
+        <h2>Spacing Consistency Test</h2>
+        <div class="test-info">
+            <p style="margin-bottom: var(--space-xs);">Space XS (8px)</p>
+            <p style="margin-bottom: var(--space-sm);">Space SM (12px)</p>
+            <p style="margin-bottom: var(--space-md);">Space MD (16px)</p>
+            <p style="margin-bottom: var(--space-lg);">Space LG (24px)</p>
+            <p style="margin-bottom: var(--space-xl);">Space XL (32px)</p>
+            <p style="margin-bottom: var(--space-2xl);">Space 2XL (48px)</p>
+            <p>All spacing follows the 8px base scale.</p>
+        </div>
+    </section>
+
+    <script>
+        // Breakpoint indicator
+        function updateBreakpoint() {
+            const width = window.innerWidth;
+            const indicator = document.getElementById('breakpoint-text');
+            
+            if (width < 768) {
+                indicator.textContent = `Mobile (${width}px)`;
+                indicator.style.backgroundColor = '#E74C3C';
+            } else if (width < 1200) {
+                indicator.textContent = `Tablet (${width}px)`;
+                indicator.style.backgroundColor = '#F39C12';
+            } else {
+                indicator.textContent = `Desktop (${width}px)`;
+                indicator.style.backgroundColor = '#1B4332';
+            }
+        }
+        
+        updateBreakpoint();
+        window.addEventListener('resize', updateBreakpoint);
+    </script>
+</body>
+</html>

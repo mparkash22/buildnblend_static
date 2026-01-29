@@ -1,0 +1,155 @@
+/* Typography Styles */
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-md);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: var(--space-md);
+    max-width: 75ch; /* Optimal line length for readability */
+}
+
+/* Links */
+a {
+    color: var(--color-accent);
+    transition: color var(--transition-base);
+}
+
+a:hover {
+    color: var(--color-highlight);
+}
+
+a:focus {
+    outline: 2px solid var(--color-lime);
+    outline-offset: 2px;
+}
+
+/* Strong and emphasis */
+strong,
+b {
+    font-weight: var(--font-weight-bold);
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+/* Small text */
+small {
+    font-size: var(--font-size-small);
+}
+
+/* Lists */
+ul,
+ol {
+    margin-bottom: var(--space-md);
+}
+
+li {
+    margin-bottom: var(--space-xs);
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid var(--color-gold);
+    padding-left: var(--space-lg);
+    margin: var(--space-xl) 0;
+    font-style: italic;
+    color: var(--color-text-secondary);
+}
+
+/* Code */
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--color-cream);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Text utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-primary {
+    color: var(--color-text-primary);
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.text-highlight {
+    color: var(--color-highlight);
+}
+
+/* Font weight utilities */
+.font-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.font-medium {
+    font-weight: var(--font-weight-medium);
+}
+
+.font-regular {
+    font-weight: var(--font-weight-regular);
+}

@@ -1,0 +1,87 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="burritoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4a460"/>
+      <stop offset="50%" style="stop-color:#daa520"/>
+      <stop offset="100%" style="stop-color:#cd853f"/>
+    </linearGradient>
+    <radialGradient id="plateGradient" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#f8f9fa"/>
+    </radialGradient>
+    <linearGradient id="riceGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff8dc"/>
+      <stop offset="100%" style="stop-color:#f5deb3"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="190" fill="#2d5016" opacity="0.1"/>
+  
+  <!-- Plate shadow -->
+  <ellipse cx="205" cy="340" rx="130" ry="25" fill="#000000" opacity="0.15"/>
+  
+  <!-- Plate -->
+  <circle cx="200" cy="200" r="150" fill="url(#plateGradient)" stroke="#e9ecef" stroke-width="3"/>
+  <circle cx="200" cy="200" r="140" fill="none" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Burrito shadow on plate -->
+  <ellipse cx="205" cy="230" rx="85" ry="25" fill="#000000" opacity="0.1"/>
+  
+  <!-- Burrito main body -->
+  <ellipse cx="200" cy="200" rx="80" ry="35" fill="url(#burritoGradient)"/>
+  
+  <!-- Burrito texture/grill marks -->
+  <path d="M 130 185 L 270 185" stroke="#cd853f" stroke-width="2" opacity="0.7"/>
+  <path d="M 135 200 L 265 200" stroke="#cd853f" stroke-width="2" opacity="0.7"/>
+  <path d="M 130 215 L 270 215" stroke="#cd853f" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Burrito ends showing filling -->
+  <!-- Left end -->
+  <ellipse cx="120" cy="200" rx="12" ry="30" fill="#8b4513"/>
+  <ellipse cx="120" cy="200" rx="8" ry="25" fill="url(#riceGradient)"/>
+  
+  <!-- Right end -->
+  <ellipse cx="280" cy="200" rx="12" ry="30" fill="#8b4513"/>
+  <ellipse cx="280" cy="200" rx="8" ry="25" fill="url(#riceGradient)"/>
+  
+  <!-- Filling visible at ends -->
+  <!-- Beans -->
+  <ellipse cx="118" cy="190" rx="3" ry="6" fill="#8b0000"/>
+  <ellipse cx="122" cy="210" rx="2" ry="4" fill="#8b0000"/>
+  <ellipse cx="278" cy="195" rx="3" ry="5" fill="#8b0000"/>
+  <ellipse cx="282" cy="205" rx="2" ry="4" fill="#8b0000"/>
+  
+  <!-- Cheese -->
+  <rect x="116" y="185" width="8" height="3" rx="1" fill="#ffd700"/>
+  <rect x="276" y="200" width="8" height="3" rx="1" fill="#ffd700"/>
+  
+  <!-- Lettuce -->
+  <path d="M 115 200 Q 120 195 125 200 Q 120 205 115 200" fill="#228b22"/>
+  <path d="M 275 190 Q 280 185 285 190 Q 280 195 275 190" fill="#228b22"/>
+  
+  <!-- Meat -->
+  <ellipse cx="120" cy="205" rx="4" ry="3" fill="#8b4513"/>
+  <ellipse cx="280" cy="190" rx="3" ry="3" fill="#8b4513"/>
+  
+  <!-- Sour cream -->
+  <ellipse cx="119" cy="195" rx="3" ry="2" fill="#f5f5dc"/>
+  <ellipse cx="281" cy="200" rx="2" ry="2" fill="#f5f5dc"/>
+  
+  <!-- Burrito highlight -->
+  <ellipse cx="200" cy="180" rx="70" ry="8" fill="#ffffff" opacity="0.3"/>
+  
+  <!-- Garnish on plate -->
+  <circle cx="120" cy="280" r="3" fill="#228b22"/>
+  <circle cx="280" cy="280" r="3" fill="#228b22"/>
+  <circle cx="200" cy="300" r="2" fill="#dc143c"/>
+  <circle cx="160" cy="290" r="2" fill="#dc143c"/>
+  <circle cx="240" cy="290" r="2" fill="#dc143c"/>
+  
+  <!-- Salsa drops -->
+  <circle cx="150" cy="270" r="2" fill="#dc143c" opacity="0.7"/>
+  <circle cx="250" cy="270" r="1.5" fill="#dc143c" opacity="0.7"/>
+  
+  <!-- Plate rim highlight -->
+  <circle cx="200" cy="200" r="145" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+</svg>
