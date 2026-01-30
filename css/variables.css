@@ -30,15 +30,15 @@
     --gradient-card: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(154, 205, 50, 0.05) 100%);
     
     /* ========================================
-       FOOTER COLOR SCHEME - MEDIUM GRAY
+       FOOTER COLOR SCHEME - CHARCOAL (MATCHING HEADER)
        ======================================== */
-    --footer-bg: #4A4A4A;              /* Medium Gray - Neutral foundation */
-    --footer-text: #F8F7F2;            /* Cream text - 10.5:1 contrast */
-    --footer-heading: #D4AF37;         /* Gold headings - 4.8:1 contrast */
-    --footer-accent: #9ACD32;          /* Lime accents - bright pop */
+    --footer-bg: var(--color-charcoal);        /* Charcoal - Matching header */
+    --footer-text: #F8F7F2;                    /* Cream text - 10.5:1 contrast */
+    --footer-heading: var(--color-gold);       /* Gold headings - 4.8:1 contrast */
+    --footer-accent: var(--color-lime);        /* Lime accents - bright pop */
     --footer-text-secondary: rgba(248, 247, 242, 0.7); /* 70% opacity */
-    --footer-border: #D4AF37;          /* Gold border accent - 4px top */
-    --footer-hover-bg: rgba(74, 74, 74, 0.9); /* Darker gray on hover */
+    --footer-border: var(--color-gold);        /* Gold border accent - 4px top */
+    --footer-hover-bg: rgba(45, 52, 54, 0.9);  /* Darker charcoal on hover */
     
     /* ========================================
        TYPOGRAPHY

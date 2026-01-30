@@ -95,4 +95,4 @@ dist/
 
 ## Support
 
-For questions or issues, contact: hello@buildandblend.in
+For questions or issues, contact: hello@buildnblend.com

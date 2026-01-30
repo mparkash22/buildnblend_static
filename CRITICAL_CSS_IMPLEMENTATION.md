@@ -187,7 +187,7 @@ This will:
 ### Support
 
 For questions or issues:
-- Email: hello@buildandblend.in
+- Email: hello@buildnblend.com
 - Review: `dist/README.md` for deployment instructions
 - Check: `scripts/critical-css.js` for implementation details
 

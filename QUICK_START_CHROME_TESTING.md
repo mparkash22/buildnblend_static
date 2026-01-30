@@ -15,7 +15,7 @@ python -m http.server 8000
 # Then open: http://localhost:8000
 
 # If testing production:
-# Open: https://buildandblend.in
+# Open: https://buildnblend.com
 ```
 
 ### Step 2: Run Automated Tests

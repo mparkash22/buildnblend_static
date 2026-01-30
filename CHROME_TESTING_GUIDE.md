@@ -77,7 +77,7 @@ python -m http.server 8000
 
 **Option B: Production Testing**
 ```
-Open https://buildandblend.in in Chrome
+Open https://buildnblend.com in Chrome
 ```
 
 ---
